@@ -2023,6 +2023,17 @@
     </script>
     <!-- end script -->
     <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get('to');
+            
+            if (guestName) {
+                const guestSlot = document.getElementById('guestNameSlot');
+                if (guestSlot) {
+                    guestSlot.innerText = guestName;
+                }
+            }
+        });
     </script>
 
     <script defer
